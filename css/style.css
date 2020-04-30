@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    background: #eee;
+}
+
+canvas {
+    position: absolute;
+    top: 24%;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    height: 58vh;
+    transform: translateX(-8px);
+    margin: auto;
+    background: #111;
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+.arcadeOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@media screen and (max-height: 700px) {
+    canvas {
+        transform: translateX(-6px);
+    }
+}
+
+@media screen and (max-height: 400px) {
+    canvas {
+        transform: translateX(-2px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    canvas {
+        background: none;
+        top: 0;
+        max-height: 100vh;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    .arcadeOverlay {
+        display: none;
+    }
+}
